@@ -24,50 +24,40 @@ class _PageState extends State<Page> {
   @override
   Widget build(BuildContext context) {
     return CustomAnimation<double>(
-   
         control: CustomAnimationControl.mirror,
-        tween: Tween<double>(begin: -100.0, end: 100.0),
+        tween: Tween<double>(begin: 200.0, end: 500.0),
         builder: (context, child, value) {
-
           return Transform.translate(
             offset: Offset(value, 0),
             child: child,
           );
         },
-        // there is a button
         child:
         Stack(
           children: [
-            Positioned(
-                top: 0.2,
-                left: 0.0,
-                right: 0.0,
-                child: Padding(
-                    padding:
-                    const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Container(
-                      color: Colors.blue[50],
-                      child:
-
-             
                       Text('FoodyGuru',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 70,
                           letterSpacing: 5,
-                          fontWeight: FontWeight.w300,
-                          fontStyle: FontStyle.italic,
+                          fontWeight: FontWeight.bold,
                           foreground: Paint()
                             ..style = PaintingStyle.stroke
                             ..strokeWidth = 10
                             ..color = Colors.red,
                         ),
                       ),
-           
+                      const Text(
+                        'FoodyGuru',
+                      style: TextStyle(
+                      fontSize: 70,
+                      letterSpacing: 5,
+                      fontWeight: FontWeight.bold,
+                        color: Colors.amber,
+        ),
+      ),
 
-                    )
-                )
-            )
+
           ],
         )
     );
