@@ -24,11 +24,11 @@ class _PageState extends State<Page> {
   @override
   Widget build(BuildContext context) {
     return CustomAnimation<double>(
-      // bind state variable to parameter
+   
         control: CustomAnimationControl.mirror,
         tween: Tween<double>(begin: -100.0, end: 100.0),
         builder: (context, child, value) {
-          // animation that moves child from left to right
+
           return Transform.translate(
             offset: Offset(value, 0),
             child: child,
@@ -49,7 +49,7 @@ class _PageState extends State<Page> {
                       color: Colors.blue[50],
                       child:
 
-                      // The text border
+             
                       Text('FoodyGuru',
                         textAlign: TextAlign.center,
                         style: TextStyle(
@@ -63,7 +63,7 @@ class _PageState extends State<Page> {
                             ..color = Colors.red,
                         ),
                       ),
-                      // The text inside
+           
 
                     )
                 )
